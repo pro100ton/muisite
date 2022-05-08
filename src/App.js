@@ -30,22 +30,20 @@ const mediaCard = (
 )
 
 
-
 function App() {
     const [sliderValue, setSliderValue] = useState(2018)
 
     function handleSliderChange(event, newValue) {
-        console.log(event.target.innerText)
-        setSliderValue(+event.target.innerText)
+        setSliderValue(newValue)
     }
 
     const yearChips = (
         <Stack direction="row" spacing={1}>
-            <Chip label="2018" variant="outlined" onClick={handleSliderChange} />
-            <Chip label="2019" variant="outlined" onClick={handleSliderChange} />
-            <Chip label="2020" variant="outlined" onClick={handleSliderChange} />
-            <Chip label="2021" variant="outlined" onClick={handleSliderChange} />
-            <Chip label="2022" variant="outlined" onClick={handleSliderChange} />
+            <Chip label="2018" variant="outlined" onClick={handleSliderChange}/>
+            <Chip label="2019" variant="outlined" onClick={handleSliderChange}/>
+            <Chip label="2020" variant="outlined" onClick={handleSliderChange}/>
+            <Chip label="2021" variant="outlined" onClick={handleSliderChange}/>
+            <Chip label="2022" variant="outlined" onClick={handleSliderChange}/>
         </Stack>
     )
 
@@ -54,18 +52,17 @@ function App() {
             <CardContent sx={{mx: "auto"}}>
                 <h1>Select year</h1>
             </CardContent>
-            <CardActions >
-                {/*<Slider*/}
-                {/*    sx={{width: 200}}*/}
-                {/*    aria-label="Always visible"*/}
-                {/*    min={2018}*/}
-                {/*    max={2022}*/}
-                {/*    defaultValue={2018}*/}
-                {/*    step={1}*/}
-                {/*    valueLabelDisplay="on"*/}
-                {/*    onChange={handleSliderChange}*/}
-                {/*/>*/}
-                {yearChips}
+            <CardActions sx={{mx: "auto", width: 200}}>
+                <Slider
+                    sx={{width: 200}}
+                    aria-label="Always visible"
+                    min={2018}
+                    max={2022}
+                    defaultValue={2018}
+                    step={1}
+                    valueLabelDisplay="on"
+                    onChange={handleSliderChange}
+                />
             </CardActions>
         </Fragment>
     )
@@ -134,29 +131,27 @@ function App() {
                 </Toolbar>
             </AppBar>
             <Grid container spacing={2} rowSpacing={3} style={{'padding': '10px 10px 10px 10px'}}>
-                <Grid item xs={8}>
-                    <Box>
-                        <Card variant="outlined">{infoCard}</Card>
-                    </Box>
-                </Grid>
-                <Grid item xs={4}>
-                    <Box>
-                        <Card variant="outlined">{mediaCard}</Card>
-                    </Box>
-                </Grid>
+                {/*<Grid item xs={8}>*/}
+                {/*    <Box>*/}
+                {/*        <Card variant="outlined">{infoCard}</Card>*/}
+                {/*    </Box>*/}
+                {/*</Grid>*/}
+                {/*<Grid item xs={4}>*/}
+                {/*    <Box>*/}
+                {/*        <Card variant="outlined">{mediaCard}</Card>*/}
+                {/*    </Box>*/}
+                {/*</Grid>*/}
                 <Grid item xs="auto" minWidth={300}>
                     <Box>
                         <Card variant="outlined">{sliderCard}</Card>
                     </Box>
                 </Grid>
                 <Grid item xs>
-                    <Box>
-                        {sliderValue === 2018 && <Card variant="outlined">{aspCard}</Card>}
-                        {sliderValue === 2019 && <Card variant="outlined">{rtiCard}</Card>}
-                        {sliderValue === 2020 && <Card variant="outlined">{infoWatchCardJun}</Card>}
-                        {sliderValue === 2021 && <Card variant="outlined">{infoWatchCardMiddle}</Card>}
-                        {sliderValue === 2022 && <Card variant="outlined">{infoWatchCardSenior}</Card>}
-                    </Box>
+                    {sliderValue === 2018 && <Card variant="outlined">{aspCard}</Card>}
+                    {sliderValue === 2019 && <Card variant="outlined">{rtiCard}</Card>}
+                    {sliderValue === 2020 && <Card variant="outlined">{infoWatchCardJun}</Card>}
+                    {sliderValue === 2021 && <Card variant="outlined">{infoWatchCardMiddle}</Card>}
+                    {sliderValue === 2022 && <Card variant="outlined">{infoWatchCardSenior}</Card>}
                 </Grid>
             </Grid>
         </Fragment>
