@@ -39,7 +39,7 @@ function InfoCard(props) {
         }
     })
     return (
-        <Card variant="outlined">
+        <Card variant="outlined" sx={{mb:1}}>
             <CardContent>
                 <h1>{cardHeader}</h1>
                 <p>{cardDescription}</p>
