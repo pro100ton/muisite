@@ -9,6 +9,7 @@ function AppBarButton(props) {
         }}>
             <Typography
                 variant="h6"
+                onClick={props.onClick}
                 sx={{
                     m: "auto",
                     fontFamily: 'monospace',

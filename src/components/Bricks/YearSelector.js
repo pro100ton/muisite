@@ -10,6 +10,7 @@ function YearSelector(props) {
     for (const year of availableYears) {
         yearButtonsGroup.push(
             <FabButton
+                key={year}
                 fabValue={year}
                 onClickHandler={props.onClickHandler}
                 selectedYear={props.selectedYear}
