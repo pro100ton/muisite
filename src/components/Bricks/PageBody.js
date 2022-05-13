@@ -27,7 +27,7 @@ function PageBody(props) {
     return (
         <Fragment>
             <Grid container spacing={2} columns={{xs: 1, sm: 2, md: 2}} rowSpacing={3} sx={{p:2}}>
-                <Grid item xs={12} sm={12} md={12}>
+                <Grid item xs={1} sm={2} md={2}>
                     <YearSelector
                         onClickHandler={handleSelectYear}
                         selectedYear={sliderValue}
