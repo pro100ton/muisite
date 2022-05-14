@@ -24,15 +24,14 @@ function TopBar(props) {
                     label="Work"
                     locationName="/work">
                 </AppBarButton>
-                <AppBarButton
-                    onClick={() => { handleClick("/life"); }}
-                    label="Life"
-                    locationName="/life">
-                </AppBarButton>
+                {/*<AppBarButton*/}
+                {/*    onClick={() => { handleClick("/life"); }}*/}
+                {/*    label="Life"*/}
+                {/*    locationName="/life">*/}
+                {/*</AppBarButton>*/}
                 <AppBarButton
                     onClick={() => { handleClick("/contacts"); }}
-                    label="Contacts"
-                    xs="none"
+                    label="Links"
                     locationName="/contacts">
                 </AppBarButton>
             </Toolbar>
