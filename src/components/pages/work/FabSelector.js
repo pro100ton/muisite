@@ -2,9 +2,9 @@ import React from 'react';
 import FabButtonYear from "../../UI/FabButtonYear";
 import Box from "@mui/material/Box";
 
-const availableYears = [2018, 2019, 2020, 2021, 2022]
+const availableYears = ["History", "Skills", "Portfolio"]
 
-function YearSelector(props) {
+function FabSelector(props) {
     const yearButtonsGroup = []
     for (const year of availableYears) {
         yearButtonsGroup.push(
@@ -21,4 +21,4 @@ function YearSelector(props) {
     );
 }
 
-export default YearSelector;
+export default FabSelector;
