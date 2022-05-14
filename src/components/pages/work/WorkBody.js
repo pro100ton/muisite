@@ -20,7 +20,7 @@ function WorkBody(props) {
 
     const logo = yearLogoMap[sliderValue];
 
-    function handleSelectYear(event, newValue) {
+    function handleSelectYear(event) {
         setSliderValue(+event.currentTarget.value)
     }
 

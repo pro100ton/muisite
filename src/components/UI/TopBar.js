@@ -14,10 +14,27 @@ function TopBar(props) {
     return (
         <AppBar position="relative">
             <Toolbar sx={{m: "auto"}}>
-                <AppBarButton onClick={()=> {handleClick("/about");}} label="About" xs="flex" md="flex"></AppBarButton>
-                <AppBarButton onClick={()=> {handleClick("/work");}} label="Work" xs="flex" md="flex" ></AppBarButton>
-                <AppBarButton onClick={()=> {handleClick("/life");}} label="Life" xs="flex" md="flex"></AppBarButton>
-                <AppBarButton onClick={()=> {handleClick("/contacts");}} label="Contacts" xs="none" md="flex"></AppBarButton>
+                <AppBarButton
+                    onClick={() => { handleClick("/about"); }}
+                    label="About"
+                    locationName="/about">
+                </AppBarButton>
+                <AppBarButton
+                    onClick={() => { handleClick("/work"); }}
+                    label="Work"
+                    locationName="/work">
+                </AppBarButton>
+                <AppBarButton
+                    onClick={() => { handleClick("/life"); }}
+                    label="Life"
+                    locationName="/life">
+                </AppBarButton>
+                <AppBarButton
+                    onClick={() => { handleClick("/contacts"); }}
+                    label="Contacts"
+                    xs="none"
+                    locationName="/contacts">
+                </AppBarButton>
             </Toolbar>
         </AppBar>
     );

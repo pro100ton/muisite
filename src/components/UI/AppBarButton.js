@@ -1,21 +1,26 @@
 import React from 'react';
 import MenuItem from "@mui/material/MenuItem";
 import Typography from "@mui/material/Typography";
+import {useLocation} from 'react-router-dom'
 
 function AppBarButton(props) {
+    const location = useLocation();
+    const locationSelected = location.pathname === props.locationName
+    let labelColor = locationSelected ? '#00e5ff' : 'inherit'
     return (
-        <MenuItem sx={{
-            display: { xs: `${props.xs}`, md: `${props.md}` },
-        }}>
+        <MenuItem
+            onClick={props.onClick}
+            sx={{
+                display: {xs: `${props.xs}`, md: `${props.md}`},
+            }}>
             <Typography
                 variant="h6"
-                onClick={props.onClick}
                 sx={{
                     m: "auto",
                     fontFamily: 'monospace',
                     fontWeight: 700,
                     letterSpacing: '.3rem',
-                    color: 'inherit',
+                    color: labelColor,
                     textDecoration: 'none',
                 }}
             >
@@ -25,8 +30,8 @@ function AppBarButton(props) {
     );
 }
 
-AppBarButton.defaultProps ={
-    xs: "none",
+AppBarButton.defaultProps = {
+    xs: "flex",
     md: "flex"
 }
 
