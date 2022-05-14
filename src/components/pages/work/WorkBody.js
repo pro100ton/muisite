@@ -1,10 +1,10 @@
 import {Fragment, React, useState} from 'react';
 import {Grid} from "@mui/material";
 import YearSelector from "./YearSelector";
-import InfoCard from "../UI/InfoCard";
-import rtiLogo from "../../media/logo_with_rti_v2 (1).png";
-import aspLogo from "../../media/AspLabs.jpg"
-import iwLogo from "../../media/iw.png"
+import InfoCard from "../../UI/InfoCard";
+import rtiLogo from "../../../media/logo_with_rti_v2 (1).png";
+import aspLogo from "../../../media/AspLabs.jpg"
+import iwLogo from "../../../media/iw.png"
 import Box from '@mui/material/Box';
 
 const yearLogoMap = {
@@ -15,7 +15,7 @@ const yearLogoMap = {
     2022: iwLogo
 }
 
-function PageBody(props) {
+function WorkBody(props) {
     const [sliderValue, setSliderValue] = useState(2018)
 
     const logo = yearLogoMap[sliderValue];
@@ -57,4 +57,4 @@ function PageBody(props) {
     );
 }
 
-export default PageBody;
+export default WorkBody;

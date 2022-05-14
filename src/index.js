@@ -2,10 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import {BrowserRouter, Navigate, Route, Routes} from "react-router-dom"
-import About from "./components/pages/About";
-import Work from "./components/pages/Work";
-import Life from "./components/pages/Life";
-import Contacts from "./components/pages/Contacts";
+import Work from "./components/pages/work/Work";
+import About from "./components/pages/about/About";
+import Life from "./components/pages/life/Life";
+import Contacts from "./components/pages/contacts/Contacts";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
