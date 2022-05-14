@@ -1,7 +1,7 @@
 import React from 'react';
 import {Fab, Grid} from "@mui/material";
 
-function FabButton(props) {
+function FabButtonYear(props) {
     // Potential props for single button:
     // 1. value; 2. selectedYear; 3. onClickHandler
     return (
@@ -15,4 +15,4 @@ function FabButton(props) {
     );
 }
 
-export default FabButton;
+export default FabButtonYear;

@@ -46,7 +46,6 @@ function WorkBody(props) {
                     ></Box>
                 </Grid>
                 <Grid item xs={1} sm={2} md={1}>
-
                     <InfoCard selectedYear={sliderValue}></InfoCard>
                 </Grid>
                 <Grid item xs={1} sm={2} md={1}>
