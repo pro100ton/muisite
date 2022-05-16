@@ -17,6 +17,8 @@ function AboutBody(props) {
                     backgroundSize: "cover",
                     backgroundRepeat: "no-repeat",
                 }}
+
+
                 ></Box>
             </Grid>
             <Grid item xs={1} sm={2} md={4}>
@@ -27,6 +29,7 @@ function AboutBody(props) {
                    <TypeAnimationText animationText="Very good developer"/>
                 </Box>
             </Grid>
+
         </Grid>
     );
 }
