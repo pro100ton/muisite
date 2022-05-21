@@ -1,31 +1,34 @@
 import React, {Fragment} from 'react';
 import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-import TypeAnimationText from "./TypeAnimationText";
-
-const card = (
-    <React.Fragment>
-        <CardContent>
-            <Typography variant="h5" component="div">
-                kek
-            </Typography>
-            <Typography sx={{mb: 1.5}} color="text.secondary">
-                adjective
-            </Typography>
-            <Typography variant="body2">
-                well meaning and kindly. well meaning and kindly. well meaning and kindly. well meaning and kindly.
-            </Typography>
-        </CardContent>
-        <CardActions>
-            <Button size="small">Learn More</Button>
-        </CardActions>
-    </React.Fragment>
-);
+import Box from "@mui/material/Box";
 
 function CardPrototype(props) {
+
+    const card = (
+        <Fragment>
+            <CardContent>
+                <Typography variant="h5" component="div" align="center">
+                    {props.cardHeader}
+                </Typography>
+                <Typography sx={{mb: 1.5}} align="center" color="text.secondary">
+                    {props.cardMemo}
+                </Typography>
+                <Typography variant="body2" align="center">
+                    {props.cardBody}
+                </Typography>
+            {
+                props.link &&
+                    <Box display="flex" justifyContent="center" sx={{pt: "10px"}}>
+                        <Button variant="outlined" href={props.link} size="small">Learn More</Button>
+                    </Box>
+            }
+            </CardContent>
+        </Fragment>
+    );
+
     return (
         <Fragment>
             {props.transparent

@@ -1,6 +1,6 @@
 import React from 'react';
 import Box from "@mui/material/Box";
-import InstagramIcon from '@mui/icons-material/Instagram';
+import MonochromePhotosIcon from '@mui/icons-material/MonochromePhotos';
 import TelegramIcon from '@mui/icons-material/Telegram';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import TwitterIcon from '@mui/icons-material/Twitter';
@@ -8,7 +8,7 @@ import FabButtonContact from "../../UI/FabButtonContact";
 import {Grid} from "@mui/material";
 import { styled } from '@mui/material/styles';
 
-const CustomizedInstagramIcon = styled(InstagramIcon)`
+const CustomizedInstagramIcon = styled(MonochromePhotosIcon)`
     color: aliceblue;
 `
 
