@@ -2,10 +2,10 @@ import React from 'react';
 import TopBar from "../../UI/TopBar";
 import AboutBody from "./AboutBody";
 
-function About(props) {
+function About() {
     return (
         <>
-            <TopBar topBarName="Антоха Шалимов"></TopBar>
+            <TopBar></TopBar>
             <AboutBody/>
         </>
     );

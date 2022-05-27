@@ -29,11 +29,15 @@ const infoData = [
     },
 ]
 
-function InfoCard(props) {
+type Props = {
+    selectedYear: number
+}
+
+function InfoCard({selectedYear}: Props) {
     let cardHeader = "";
     let cardDescription = "";
     infoData.forEach((element, index, array) => {
-        if (element.year === props.selectedYear) {
+        if (element.year === selectedYear) {
             cardHeader = element.header;
             cardDescription = element.description
         }

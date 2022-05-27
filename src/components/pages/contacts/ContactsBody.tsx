@@ -47,7 +47,7 @@ const contactsList = [
     },
 ]
 
-const contactsListFabs = [];
+const contactsListFabs: React.ReactNode[] = [];
 
 for (const contact of contactsList) {
     contactsListFabs.push(
@@ -61,7 +61,7 @@ for (const contact of contactsList) {
     )
 }
 
-function ContactsBody(props) {
+function ContactsBody() {
     return (
         <Grid container spacing={2} columns={{xs: 1, sm: 3, md: 3}} rowSpacing={3} sx={{p: 2}}>
             <Grid item xs={1} sm={3} md={3}>

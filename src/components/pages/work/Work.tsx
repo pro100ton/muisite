@@ -1,11 +1,13 @@
 import React from 'react';
 import IndexLayout from "../../Bricks/IndexLayout";
+import WorkBody from "./WorkBody";
 
-function Life(props) {
+function Work() {
     return (
         <IndexLayout>
+            <WorkBody></WorkBody>
         </IndexLayout>
     );
 }
 
-export default Life;
+export default Work;

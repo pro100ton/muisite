@@ -1,12 +1,16 @@
 import React, {Fragment} from 'react';
 import TopBar from "../UI/TopBar";
 
-function IndexLayout(props) {
+type Props = {
+    children?: React.ReactNode
+}
+
+function IndexLayout({children}: Props) {
     return (
         <Fragment>
-            <TopBar topBarName="Антоха Шалимов"></TopBar>
+            <TopBar/>
             <Fragment>
-                {props.children}
+                {children}
             </Fragment>
         </Fragment>
     );

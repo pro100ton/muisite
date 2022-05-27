@@ -5,7 +5,15 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Box from "@mui/material/Box";
 
-function CardPrototype(props) {
+type Props = {
+    cardHeader: string,
+    cardMemo: string,
+    cardBody: string,
+    link?: string,
+    transparent?: boolean
+}
+
+const CardPrototype: React.FC<Props> = props => {
 
     const card = (
         <Fragment>
@@ -19,12 +27,12 @@ function CardPrototype(props) {
                 <Typography variant="body2" align="center">
                     {props.cardBody}
                 </Typography>
-            {
-                props.link &&
+                {
+                    props.link &&
                     <Box display="flex" justifyContent="center" sx={{pt: "10px"}}>
                         <Button variant="outlined" href={props.link} size="small">Learn More</Button>
                     </Box>
-            }
+                }
             </CardContent>
         </Fragment>
     );

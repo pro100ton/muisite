@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import {createRoot} from 'react-dom/client';
 import './index.css';
 import {BrowserRouter, Navigate, Route, Routes} from "react-router-dom"
 import Work from "./components/pages/work/Work";
@@ -7,7 +7,10 @@ import About from "./components/pages/about/About";
 import Life from "./components/pages/life/Life";
 import Contacts from "./components/pages/contacts/Contacts";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const rootId = document.getElementById('root');
+if (rootId === null) throw new Error('Root container missing in index.html');
+
+const root = createRoot(rootId);
 root.render(
     <BrowserRouter>
         <React.StrictMode>

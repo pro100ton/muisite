@@ -1,10 +1,9 @@
 import React from 'react';
-import TypeAnimationText from "../../UI/TypeAnimationText";
 import {Grid} from "@mui/material";
 import Box from "@mui/material/Box";
 import ebalo from "../../../media/photo_2022-04-20_10-57-20.jpg"
 
-function AboutBody(props) {
+function AboutBody() {
     return (
         <Grid container spacing={2} columns={{xs: 1, sm: 6, md: 12}}
               rowSpacing={3}
@@ -27,13 +26,13 @@ function AboutBody(props) {
                 />
             </Grid>
             <Grid item xs={1} sm={2} md={4}
-                maxWidth={{ lg: 700 }}
-                minWidth={{ lg: 500 }}>
+                  maxWidth={{ lg: 700 }}
+                  minWidth={{ lg: 500 }}>
                 <Box height="100%"
                      display="flex"
                      justifyContent="center"
                      flexDirection="column">
-                    <TypeAnimationText animationText="Very good developer"/>
+                     Very good developer!
                 </Box>
             </Grid>
 

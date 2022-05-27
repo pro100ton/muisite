@@ -1,9 +1,9 @@
 import React from 'react';
-import WorkHistoryElement from "../../UI/WorkElements/WorkHistoryElement";
-import {workHistory} from "../../../constants/WorkData";
+import WorkHistoryElement from "../../../UI/workElements/WorkHistoryElement";
+import {workHistory} from "../../../../constants/WorkData";
 
-function WorkHistory(props) {
-    let workRender = [];
+function WorkHistory() {
+    let workRender: React.ReactNode[] = [];
     let startDelay = 0;
     workHistory.forEach((element, index) => {
         workRender.push(
@@ -12,9 +12,8 @@ function WorkHistory(props) {
                 delay={startDelay}
                 companyCard={element.companyCard}
                 companyHistory={element.companyHistory}
-                companyLogo={element.companyCard.companyLogo}
                 color={element.companyColor}
-            />
+                companyColor={element.companyColor}/>
         )
         startDelay += 500
     })

@@ -2,13 +2,36 @@ import React from 'react';
 import {Grid} from "@mui/material";
 import Box from "@mui/material/Box";
 import CardPrototype from "../CardPrototype";
-import CompanyLogoBox from "../Boxes/CompanyLogoBox";
+import CompanyLogoBox from "../boxes/CompanyLogoBox";
 import {animated, useSpring} from '@react-spring/web'
 
-function WorkHistoryElement(props) {
+type companyHistoryEntry = {
+    position: string,
+    positionStartDate: string,
+    positionEndDate: string,
+    positionDescription: string,
+}
+
+type companyCardEntry = {
+    companyLogo: any,
+    companyName: string,
+    companyObjective: string,
+    companyDescription: string,
+    companySiteLink: string
+}
+
+type Props = {
+    companyColor: string,
+    companyHistory: companyHistoryEntry[],
+    companyCard: companyCardEntry,
+    delay: number,
+    color: string,
+}
+
+const WorkHistoryElement:React.FC<Props> = props => {
     const sProps = useSpring({to: {opacity: 1}, from: {opacity: 0}, delay: props.delay})
     const companyHistory = props.companyHistory;
-    let companyHistoryRender = [];
+    let companyHistoryRender: React.ReactNode[] = [];
     companyHistory.forEach((element, index) => {
         companyHistoryRender.push(
             <Box padding={1} key={index}>

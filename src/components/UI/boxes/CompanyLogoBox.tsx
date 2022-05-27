@@ -1,10 +1,15 @@
 import React from 'react';
 import Box from "@mui/material/Box";
 
-function CompanyLogoBox(props) {
+type Props = {
+    companyLogo: string,
+}
+
+const CompanyLogoBox:React.FC<Props> = props => {
     return (
         <Box
-            display="flex" justifyContent="center"
+            display="flex"
+            justifyContent="center"
             component="img"
             sx={{
                 m: "auto",
@@ -12,8 +17,8 @@ function CompanyLogoBox(props) {
                 maxWidth: {xs: 250, md: 250},
             }}
             alt="ASP labs logo"
-            src={props.companyLogo}
-        />
+            src={props.companyLogo}>
+        </Box>
     );
 }
 

@@ -1,10 +1,10 @@
-import {Fragment, useState} from 'react';
+import React, {Fragment, useState} from 'react';
 import {Grid} from "@mui/material";
 import FabSelector from "./FabSelector";
-import WorkHistory from "./WorkHistory";
+import WorkHistory from "./workTab/WorkHistory";
 
 
-function WorkBody(props) {
+function WorkBody() {
     // State for storing current selected tab
     const [selectedWorkTab, setselectedWorkTab] = useState("History")
 
@@ -12,16 +12,17 @@ function WorkBody(props) {
      * Function for handling FAB tab selection and setting selected tab state to corresponding button value
      * @param event - JS event object
      */
-    function handleSelectTab(event) {
-        setselectedWorkTab(event.currentTarget.value)
+    function handleSelectTab(event: React.MouseEvent<HTMLElement>):void {
+        console.log(event.currentTarget.innerText)
+        setselectedWorkTab(event.currentTarget.innerText)
     }
 
     // Variable will store body component to render depending on selected tab
     let componentToRender;
 
-    if (selectedWorkTab === "History") {
+    if (selectedWorkTab === "HISTORY") {
         componentToRender = <WorkHistory/>
-    } else if (selectedWorkTab === "Skills" || selectedWorkTab === "Portfolio") {
+    } else if (selectedWorkTab === "SKILLS" || selectedWorkTab === "PORTFOLIO") {
         componentToRender = `${selectedWorkTab} page in development`
     } else {
         componentToRender = `${selectedWorkTab} not found`
