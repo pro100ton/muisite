@@ -2,6 +2,7 @@ import React, {Fragment, useState} from 'react';
 import {Grid} from "@mui/material";
 import FabSelector from "./FabSelector";
 import WorkHistory from "./workTab/WorkHistory";
+import SkillsBody from "./skillsTab/SkillsBody";
 
 
 function WorkBody() {
@@ -22,7 +23,9 @@ function WorkBody() {
 
     if (selectedWorkTab === "HISTORY") {
         componentToRender = <WorkHistory/>
-    } else if (selectedWorkTab === "SKILLS" || selectedWorkTab === "PORTFOLIO") {
+    } else if (selectedWorkTab === "SKILLS"){
+        componentToRender = <SkillsBody/>
+    } else if (selectedWorkTab === "PORTFOLIO") {
         componentToRender = `${selectedWorkTab} page in development`
     } else {
         componentToRender = `${selectedWorkTab} not found`
