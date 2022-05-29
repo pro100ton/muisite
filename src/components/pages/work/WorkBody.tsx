@@ -3,11 +3,12 @@ import {Grid} from "@mui/material";
 import FabSelector from "./FabSelector";
 import WorkHistory from "./workTab/WorkHistory";
 import SkillsBody from "./skillsTab/SkillsBody";
+import {workFabTabs} from "../../../constants/WorkData";
 
 
 function WorkBody() {
     // State for storing current selected tab
-    const [selectedWorkTab, setselectedWorkTab] = useState("History")
+    const [selectedWorkTab, setselectedWorkTab] = useState(workFabTabs[0])
 
     /**
      * Function for handling FAB tab selection and setting selected tab state to corresponding button value

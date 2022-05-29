@@ -1,8 +1,8 @@
 import React from 'react';
 import FabButtonYear from "../../UI/FabButtonYear";
 import Box from "@mui/material/Box";
+import {workFabTabs} from "../../../constants/WorkData";
 
-const availableYears = ["History", "Skills", "Portfolio"]
 
 type Props = {
     onClickHandler: (event: React.MouseEvent<HTMLElement>) => void,
@@ -11,7 +11,7 @@ type Props = {
 
 const FabSelector: React.FC<Props> = props => {
     const yearButtonsGroup = []
-    for (const year of availableYears) {
+    for (const year of workFabTabs) {
         yearButtonsGroup.push(
             <FabButtonYear
                 key={year}

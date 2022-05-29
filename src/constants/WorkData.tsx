@@ -3,6 +3,7 @@ import rtiLogo from "../media/logo_with_rti_v2 (1).png"
 import nppktLogo from "../media/nppkt-removebg-preview.png"
 import iwLogo from "../media/iw-removebg-preview.png"
 
+export const workFabTabs = [ "HISTORY", "SKILLS", "PORTFOLIO" ];
 export const workHistory = [
     {
         companyColor: "linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(163, 163, 163, 0.4), rgba(0, 0, 0, 0))",
