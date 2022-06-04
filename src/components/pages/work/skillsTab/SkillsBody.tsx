@@ -1,13 +1,16 @@
 import React, {Fragment} from 'react';
 import {Grid} from "@mui/material";
-import aspLogo from "../../../../media/ASP_logo.png"
-import rtiLogo from "../../../../media/RTI_logo.png"
-import nppktLogo from "../../../../media/NPPKT_logo.png"
-import iwLogo from "../../../../media/IW_logo.png"
 import Tabs from "@mui/material/Tabs"
 import Tab from "@mui/material/Tab"
 import Box from "@mui/material/Box";
 import Typography from '@mui/material/Typography';
+import LogosTab from "../../../UI/skillsElements/LogosTab";
+import aspLogo from "../../../../media/ASP_logo.png";
+import nppktLogo from "../../../../media/NPPKT_logo.png";
+import rtiLogo from "../../../../media/RTI_logo.png";
+import iwLogo from "../../../../media/IW_logo.png";
+
+const logosArray: string[] = [aspLogo, nppktLogo, rtiLogo, iwLogo]
 
 function SkillsBody() {
     const [aspTabValue, setAspTabValue] = React.useState(0)
@@ -41,79 +44,7 @@ function SkillsBody() {
                     kik
                 </Grid>
             </Grid>
-            <Grid container
-                  spacing={1}
-                  columns={{xs: 2, sm: 2, md: 4, lg: 4}}
-                  rowSpacing={2}
-                  padding={1}
-                  sx={{
-                      m: -0.5,
-                      pl: {lg: "20%", md: "4%", sm: "4%", xs: "4%"},
-                      pr: {lg: "20%", md: "4%", sm: "4%", xs: "4%"},
-                      // backgroundColor: "red"
-                  }}
-            >
-                <Grid item xs={1} sm={1} md={1} lg={1} padding={1} justifyContent={"center"} alignItems={"center"}
-                      display={"flex"}>
-                    <Box
-                        component="img"
-                        justifyContent={"center"}
-                        alignItems={"center"}
-                        padding={1}
-                        sx={{
-                            maxHeight: {xs: 100, md: 100},
-                            maxWidth: {xs: 200, md: 200},
-                        }}
-                        alt="ASP labs logo"
-                        src={aspLogo}>
-                    </Box>
-                </Grid>
-                <Grid item xs={1} sm={1} md={1} lg={1} padding={1} justifyContent={"center"} alignItems={"center"}
-                      display={"flex"}>
-                    <Box
-                        component="img"
-                        justifyContent={"center"}
-                        alignItems={"center"}
-                        padding={1}
-                        sx={{
-                            maxHeight: {xs: 100, md: 100},
-                            maxWidth: {xs: 200, md: 200},
-                        }}
-                        alt="ASP labs logo"
-                        src={nppktLogo}>
-                    </Box>
-                </Grid>
-                <Grid item xs={1} sm={1} md={1} lg={1} padding={1} justifyContent={"center"} alignItems={"center"}
-                      display={"flex"}>
-                    <Box
-                        component="img"
-                        justifyContent={"center"}
-                        alignItems={"center"}
-                        padding={1}
-                        sx={{
-                            maxHeight: {xs: 100, md: 100},
-                            maxWidth: {xs: 200, md: 200},
-                        }}
-                        alt="ASP labs logo"
-                        src={rtiLogo}>
-                    </Box>
-                </Grid>
-                <Grid item xs={1} sm={1} md={1} lg={1} padding={1} justifyContent={"center"} alignItems={"center"}
-                      display={"flex"}>
-                    <Box
-                        component="img"
-                        justifyContent={"center"}
-                        alignItems={"center"}
-                        padding={1}
-                        sx={{
-                            maxHeight: {xs: 100, md: 100},
-                            maxWidth: {xs: 200, md: 200},
-                        }}
-                        alt="ASP labs logo"
-                        src={iwLogo}>
-                    </Box>
-                </Grid>
-            </Grid>
+            <LogosTab logos={logosArray}/>
             <Grid container
                   spacing={1}
                   columns={{xs: 1, sm: 2, md: 2, lg: 2}}
